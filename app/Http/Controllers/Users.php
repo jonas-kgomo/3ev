@@ -20,13 +20,14 @@
       public function show()
         {
             return DB::table('users')->get();
-            // return ("Hi there");
+            
         }
 
        public function inventory()
         {
+            // return list of star wars itenary
             return DB::table('star_wars')->get();
-            // return ("Hi there");
+            
         } 
      
     }

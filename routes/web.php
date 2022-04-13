@@ -17,9 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// route to show users
-// Route::get('users', 'Users@index');
-// Route::get('/users', [User::class, 'index']);
+ 
 
 Route::get('/' , [Users::class,'index']);
 

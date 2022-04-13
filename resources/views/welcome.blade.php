@@ -46,17 +46,17 @@
       <th>Value</th>
     </tr>
   </thead>
-  <tbody class="text-sm text-gray-700 pt-2 px-4">
+  <tbody class="text-xs md:text-sm  text-clip  md:text-xs text-gray-700 pt-2 px-4 ">
   @foreach($data as $item)
     <tr class="py-2 m-2">
         <td>
    
        <img 
-          alt="" class="w-32 h-20 my-2 mx-auto object-cover rounded-lg mx-auto" src={{$item -> image}}   />
+          alt="" class="w-8 md:w-32 h-8 md:h-20 my-2 mx-auto object-cover rounded-lg mx-auto" src={{$item -> image}}   />
        </td>
       <td>
           <p>Name : <span class="font-semibold text-indigo-400">{{$item -> name}}</span></p>
-          <p>Class : {{$item -> class}}</p>
+          <p class="truncate">Class : {{$item -> class}}</p>
 
       </td>
       <td><p>Status: {{$item -> status ? 'Operational ⚫️' : 'Damaged ⚪️'}}  </p>
@@ -66,7 +66,7 @@
       <td> 
         
             <p className="sr-only text-indigo-500 text-sm">Galactic Credits</p> 
-            <p className="px-2 text-red-300"> GC {{$item -> value}} </p>
+            <p className=" text-red-300"> GC {{$item -> value}} </p>
            
       
         </td>
