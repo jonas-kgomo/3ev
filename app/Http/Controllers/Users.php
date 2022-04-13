@@ -11,13 +11,13 @@
       public function index()
         {
             // return DB::table('users')->get(); 
-            $data = DB::table('users')->get();
+            $data = DB::table('star_wars')->get();
             return view('welcome', ['data' => $data]);
           
         }
       public function show()
         {
-            return DB::table('star_wars')->get();
+            return DB::table('users')->get();
             // return ("Hi there");
         }
     }

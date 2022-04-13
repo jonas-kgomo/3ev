@@ -56,12 +56,12 @@
                
 <div>
          @foreach($data as $item)
-         <li>{{$item->name}}</li>
+         <li>{{$item -> id }}</li>
             @endforeach
                 </div>
  
 
-  <table class="table-auto">
+  <table class="table-fixed uppercase gap-x-4">
   <thead>
     <tr class="uppercase text-sm text-gray-600">
       <th></th>
@@ -70,41 +70,34 @@
       <th>Value</th>
     </tr>
   </thead>
-  <tbody class="text-sm text-gray-700 pt-2">
+  <tbody class="text-sm text-gray-700 pt-2 ">
+  @foreach($data as $item)
     <tr>
         <td>
-       <img src="https://tailwindcss.com/_next/static/media/prognosis-negative.a3c55fb717747ce6804f7375a2147a76.jpg"   alt="" class="w-16 h-16 mx-2 object-cover rounded-full mx-auto" bg-slate-100" />
-</td>
+   
+       <img src={{$item -> image}}  alt="" class="w-16 h-24 mx-2 object-cover rounded-lg mx-auto" bg-slate-100" />
+       </td>
       <td>
-          <p>Name:Sand Crawler</p>
-          <p>Class: Star</p>
+          <p>Name : {{$item -> name}}</p>
+          <p>Class : {{$item -> class}}</p>
 
       </td>
-      <td><p>Status</p>
-      <p>Amarment</p>
+      <td><p>Status: {{$item -> status}}</p>
+      <p>Amarment: {{$item -> armament}}</p>
     
     </td>
-      <td>
-          <p>Status: Alive</p>
-        <p>Value: 342953</p>
+      <td> 
+       
+        <div>
+            <div className="sr-only text-indigo-500 text-sm">Galactic Credits</div> 
+            <div className="px-2 ring-2 ring-black rounded text-red-300"><br/> GC {{$item -> value}} </div>
+          </div>
+      
         </td>
     </tr>
+    @endforeach
     <tr>
-    <td>
-       <img src="https://tailwindcss.com/_next/static/media/prognosis-negative.a3c55fb717747ce6804f7375a2147a76.jpg" alt="" width="60" height="88" class="flex-none rounded-md bg-slate-100" />
-</td>
-      <td>Witchy Woman</td>
-      <td>The Eagles</td>
-      <td>1972</td>
-    </tr>
-    <tr>
-    <td>
-       <img src="https://tailwindcss.com/_next/static/media/prognosis-negative.a3c55fb717747ce6804f7375a2147a76.jpg" alt="" width="60" height="88" class="flex-none rounded-md bg-slate-100" />
-</td>
-      <td>Shining Star</td>
-      <td>Earth, Wind, and Fire</td>
-      <td>1975</td>
-    </tr>
+   
   </tbody>
 </table>
 
