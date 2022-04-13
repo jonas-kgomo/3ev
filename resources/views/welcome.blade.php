@@ -34,8 +34,7 @@
                 
                     <!-- description -->
 </div>    
-               
-  
+      
  
 
   <table class="table-fixed uppercase w-full text-sm">

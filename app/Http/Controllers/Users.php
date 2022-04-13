@@ -23,9 +23,10 @@
             // return ("Hi there");
         }
 
-        public function inventory()
+       public function inventory()
         {
             return DB::table('star_wars')->get();
             // return ("Hi there");
         } 
+     
     }

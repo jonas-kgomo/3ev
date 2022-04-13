@@ -41,7 +41,7 @@ http://localhost/users
             "edited": "2014-12-20T21:30:21.668000Z", 
             "url": "https://swapi.dev/api/vehicles/7/"
         }, 
-    ```
+```
 
 # Pagination
 
