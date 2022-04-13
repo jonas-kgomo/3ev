@@ -11,7 +11,9 @@
       public function index()
         {
             // return DB::table('users')->get(); 
-            $data = DB::table('star_wars')->get();
+            // $data = DB::table('star_wars')->get();
+            // pagination 
+            $data = DB::table('star_wars')->paginate(4);
             return view('welcome', ['data' => $data]);
           
         }
@@ -20,4 +22,10 @@
             return DB::table('users')->get();
             // return ("Hi there");
         }
+
+        public function inventory()
+        {
+            return DB::table('star_wars')->get();
+            // return ("Hi there");
+        } 
     }

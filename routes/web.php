@@ -25,3 +25,5 @@ Route::get('/' , [Users::class,'index']);
 
 Route::get('stars' , [Users::class,'show']);
  
+Route::get('users' , [Users::class,'inventory']);
+ 
